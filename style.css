@@ -80,17 +80,13 @@ main{
 }
 
 .enter{
-
-    width: 90%;
-}
-
-form{
     display: flex;
     justify-content: left;
     gap: 20px;
     border-bottom: 1px solid var(--light-gray);
     position: relative;
     padding-bottom: 30px;
+    width: 90%;
 }
 
 .input-wrap{

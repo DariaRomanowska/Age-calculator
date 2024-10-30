@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html, body, div, span, applet, object, iframe,
@@ -61,14 +60,14 @@ table {
     --off-black: hsl(0, 0%, 8%);
 }
 
-body{
+body {
     position: relative;
     background: var(--light-gray);
     width: 100vw;
     height: 100vh;
 }
 
-main{
+main {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -79,7 +78,7 @@ main{
     width: 40%;
 }
 
-.enter{
+.enter {
     display: flex;
     justify-content: left;
     gap: 20px;
@@ -89,43 +88,51 @@ main{
     width: 90%;
 }
 
-.input-wrap{
+.input-wrap {
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 28%;
-    label{
+
+    label {
         text-transform: uppercase;
         color: var(--smokey-gray);
         letter-spacing: 3px;
         font-size: 10px;
         font-weight: 900;
     }
-    input{
+
+    input {
         font-size: 32px;
         color: black;
         padding: 10px 20px;
         border: 1px solid var(--light-gray);
         border-radius: 8px;
         font-weight: 900;
+        cursor: pointer;
     }
 }
 
-::placeholder{
+::placeholder {
     color: var(--smokey-gray);
 }
+
+input:focus-visible{
+    outline: 1px solid var(--purple);
+}
+
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-.error-massage{
+.error-massage {
     color: var(--light-red);
     font-size: 10px;
     font-style: italic;
 }
 
 
-.submit-btn{
+.submit-btn {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -138,18 +145,88 @@ input[type=number]::-webkit-inner-spin-button {
     background: var(--purple);
 }
 
-.result{
+.submit-btn:hover {
+    background: #000;
+}
+
+.result {
     padding-top: 20px;
 }
 
 
-.result-data{
+.result-data {
     font-size: 80px;
     font-style: italic;
     font-weight: 800;
     padding-top: 10px;
-    span{
+
+    span {
         color: var(--purple);
 
     }
+}
+
+@media only screen and (max-width: 1500px){
+    main{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    main{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    body {
+       padding: 50px 0 0 16px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    main{
+        width: 80%;
+        position: static;
+        padding: 50px 16px;
+        top: 0;
+        left: 0;
+        transform: unset;
+
+    }
+
+    .enter {
+        justify-content: space-between;
+        padding-bottom: 60px;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .submit-btn {
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+    }
+    .input-wrap {
+        width: 30%;
+        label {
+            font-size: 16px;
+            letter-spacing: 5px;
+            font-weight: 600;
+        }
+
+        input {
+            font-size: 24px;
+
+        }
+
+    }
+    .result {
+        padding-top: 70px;
+    }
+
+    .result-data {
+        font-size: 60px;
+    }
+
+
 }
